@@ -1,3 +1,74 @@
+# DataLink Web: Project Skeleton
+Generated for NotebookLM analysis.
+
+## File: ./tailwind.config.js
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+    },
+  },
+  plugins: [],
+};
+
+```
+
+## File: ./next-env.d.ts
+```javascript
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/basic-features/typescript for more information.
+
+```
+
+## File: ./package.json
+```javascript
+{
+  "name": "mla-dashboard-stable",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "next": "14.2.3",
+    "next-auth": "^4.24.11",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hot-toast": "^2.6.0",
+    "react-select": "^5.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.1",
+    "@types/react": "19.1.12",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
+
+```
+
+## File: ./package-lock.json
+```javascript
 {
   "name": "mla-dashboard-stable",
   "version": "0.1.0",
@@ -9,7 +80,6 @@
       "version": "0.1.0",
       "dependencies": {
         "bcryptjs": "^3.0.2",
-        "mongodb": "^7.1.1",
         "next": "14.2.3",
         "next-auth": "^4.24.11",
         "react": "^18",
@@ -534,14 +604,6 @@
         "@jridgewell/sourcemap-codec": "^1.4.14"
       }
     },
-    "node_modules/@mongodb-js/saslprep": {
-      "version": "1.4.6",
-      "resolved": "https://registry.npmjs.org/@mongodb-js/saslprep/-/saslprep-1.4.6.tgz",
-      "integrity": "sha512-y+x3H1xBZd38n10NZF/rEBlvDOOMQ6LKUTHqr8R9VkJ+mmQOYtJFxIlkkK8fZrtOiL6VixbOBWMbZGBdal3Z1g==",
-      "dependencies": {
-        "sparse-bitfield": "^3.0.3"
-      }
-    },
     "node_modules/@napi-rs/wasm-runtime": {
       "version": "0.2.12",
       "resolved": "https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.12.tgz",
@@ -863,19 +925,6 @@
       "license": "MIT",
       "peerDependencies": {
         "@types/react": "*"
-      }
-    },
-    "node_modules/@types/webidl-conversions": {
-      "version": "7.0.3",
-      "resolved": "https://registry.npmjs.org/@types/webidl-conversions/-/webidl-conversions-7.0.3.tgz",
-      "integrity": "sha512-CiJJvcRtIgzadHCYXw7dqEnMNRjhGZlYK05Mj9OyktqV8uVT8fD2BFOB7S1uwBE3Kj2Z+4UyPmFw/Ixgw/LAlA=="
-    },
-    "node_modules/@types/whatwg-url": {
-      "version": "13.0.0",
-      "resolved": "https://registry.npmjs.org/@types/whatwg-url/-/whatwg-url-13.0.0.tgz",
-      "integrity": "sha512-N8WXpbE6Wgri7KUSvrmQcqrMllKZ9uxkYWMt+mCSGwNc0Hsw9VQTW7ApqI4XNrx6/SaM2QQJCzMPDEXE058s+Q==",
-      "dependencies": {
-        "@types/webidl-conversions": "*"
       }
     },
     "node_modules/@typescript-eslint/parser": {
@@ -1688,14 +1737,6 @@
       },
       "engines": {
         "node": ">=8"
-      }
-    },
-    "node_modules/bson": {
-      "version": "7.2.0",
-      "resolved": "https://registry.npmjs.org/bson/-/bson-7.2.0.tgz",
-      "integrity": "sha512-YCEo7KjMlbNlyHhz7zAZNDpIpQbd+wOEHJYezv0nMYTn4x31eIUM2yomNNubclAt63dObUzKHWsBLJ9QcZNSnQ==",
-      "engines": {
-        "node": ">=20.19.0"
       }
     },
     "node_modules/busboy": {
@@ -4152,11 +4193,6 @@
       "integrity": "sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==",
       "license": "MIT"
     },
-    "node_modules/memory-pager": {
-      "version": "1.5.0",
-      "resolved": "https://registry.npmjs.org/memory-pager/-/memory-pager-1.5.0.tgz",
-      "integrity": "sha512-ZS4Bp4r/Zoeq6+NLJpP+0Zzm0pR8whtGPf1XExKLJBAczGMnSi3It14OiNCStjQjM6NU1okjQGSxgEZN8eBYKg=="
-    },
     "node_modules/merge2": {
       "version": "1.4.1",
       "resolved": "https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz",
@@ -4212,63 +4248,6 @@
       "license": "ISC",
       "engines": {
         "node": ">=16 || 14 >=14.17"
-      }
-    },
-    "node_modules/mongodb": {
-      "version": "7.1.1",
-      "resolved": "https://registry.npmjs.org/mongodb/-/mongodb-7.1.1.tgz",
-      "integrity": "sha512-067DXiMjcpYQl6bGjWQoTUEE9UoRViTtKFcoqX7z08I+iDZv/emH1g8XEFiO3qiDfXAheT5ozl1VffDTKhIW/w==",
-      "dependencies": {
-        "@mongodb-js/saslprep": "^1.3.0",
-        "bson": "^7.1.1",
-        "mongodb-connection-string-url": "^7.0.0"
-      },
-      "engines": {
-        "node": ">=20.19.0"
-      },
-      "peerDependencies": {
-        "@aws-sdk/credential-providers": "^3.806.0",
-        "@mongodb-js/zstd": "^7.0.0",
-        "gcp-metadata": "^7.0.1",
-        "kerberos": "^7.0.0",
-        "mongodb-client-encryption": ">=7.0.0 <7.1.0",
-        "snappy": "^7.3.2",
-        "socks": "^2.8.6"
-      },
-      "peerDependenciesMeta": {
-        "@aws-sdk/credential-providers": {
-          "optional": true
-        },
-        "@mongodb-js/zstd": {
-          "optional": true
-        },
-        "gcp-metadata": {
-          "optional": true
-        },
-        "kerberos": {
-          "optional": true
-        },
-        "mongodb-client-encryption": {
-          "optional": true
-        },
-        "snappy": {
-          "optional": true
-        },
-        "socks": {
-          "optional": true
-        }
-      }
-    },
-    "node_modules/mongodb-connection-string-url": {
-      "version": "7.0.1",
-      "resolved": "https://registry.npmjs.org/mongodb-connection-string-url/-/mongodb-connection-string-url-7.0.1.tgz",
-      "integrity": "sha512-h0AZ9A7IDVwwHyMxmdMXKy+9oNlF0zFoahHiX3vQ8e3KFcSP3VmsmfvtRSuLPxmyv2vjIDxqty8smTgie/SNRQ==",
-      "dependencies": {
-        "@types/whatwg-url": "^13.0.0",
-        "whatwg-url": "^14.1.0"
-      },
-      "engines": {
-        "node": ">=20.19.0"
       }
     },
     "node_modules/ms": {
@@ -5019,6 +4998,7 @@
       "version": "2.3.1",
       "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz",
       "integrity": "sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==",
+      "dev": true,
       "license": "MIT",
       "engines": {
         "node": ">=6"
@@ -5576,14 +5556,6 @@
         "node": ">=0.10.0"
       }
     },
-    "node_modules/sparse-bitfield": {
-      "version": "3.0.3",
-      "resolved": "https://registry.npmjs.org/sparse-bitfield/-/sparse-bitfield-3.0.3.tgz",
-      "integrity": "sha512-kvzhi7vqKTfkh0PZU+2D2PIllw2ymqJKujUcyPMd9Y75Nv4nPbGJZXNhxsgdQab2BmlDct1YnfQCguEvHr7VsQ==",
-      "dependencies": {
-        "memory-pager": "^1.0.2"
-      }
-    },
     "node_modules/stable-hash": {
       "version": "0.0.5",
       "resolved": "https://registry.npmjs.org/stable-hash/-/stable-hash-0.0.5.tgz",
@@ -6088,17 +6060,6 @@
         "node": ">=8.0"
       }
     },
-    "node_modules/tr46": {
-      "version": "5.1.1",
-      "resolved": "https://registry.npmjs.org/tr46/-/tr46-5.1.1.tgz",
-      "integrity": "sha512-hdF5ZgjTqgAntKkklYw0R03MG2x/bSzTtkxmIRw/sTNV8YXsCJ1tfLAX23lhxhHJlEf3CRCOCGGWw3vI3GaSPw==",
-      "dependencies": {
-        "punycode": "^2.3.1"
-      },
-      "engines": {
-        "node": ">=18"
-      }
-    },
     "node_modules/ts-api-utils": {
       "version": "1.4.3",
       "resolved": "https://registry.npmjs.org/ts-api-utils/-/ts-api-utils-1.4.3.tgz",
@@ -6358,26 +6319,6 @@
         "uuid": "dist/bin/uuid"
       }
     },
-    "node_modules/webidl-conversions": {
-      "version": "7.0.0",
-      "resolved": "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-7.0.0.tgz",
-      "integrity": "sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==",
-      "engines": {
-        "node": ">=12"
-      }
-    },
-    "node_modules/whatwg-url": {
-      "version": "14.2.0",
-      "resolved": "https://registry.npmjs.org/whatwg-url/-/whatwg-url-14.2.0.tgz",
-      "integrity": "sha512-De72GdQZzNTUBBChsXueQUnPKDkg/5A5zp7pFDuQAj5UFoENpiACU0wlCvzpAGnTkj++ihpKwKyYewn/XNUbKw==",
-      "dependencies": {
-        "tr46": "^5.1.0",
-        "webidl-conversions": "^7.0.0"
-      },
-      "engines": {
-        "node": ">=18"
-      }
-    },
     "node_modules/which": {
       "version": "2.0.2",
       "resolved": "https://registry.npmjs.org/which/-/which-2.0.2.tgz",
@@ -6635,3 +6576,2580 @@
     }
   }
 }
+
+```
+
+## File: ./.eslintrc.json
+```javascript
+{
+  "extends": "next/core-web-vitals"
+}
+
+```
+
+## File: ./tsconfig.json
+```javascript
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+```
+
+## File: ./.env.local
+```javascript
+# NextAuth Secrets
+AUTH_SECRET=r25GHg9w35IEVtEPV4GGWR4EDjUdhngPhBfEwE+2pwI=
+NEXTAUTH_URL=http://localhost:3000
+
+# Podio API Credentials
+PODIO_CLIENT_ID=casos-jtlkpo
+PODIO_CLIENT_SECRET=HsCMuyTcBumszghs5Hmnsj3yU1P8Yd6oHvhkuG9rZjY8Q54N3BwpWRqUudc4pIqq
+PODIO_USERNAME=edgar.asistente.medina@gmail.com
+PODIO_PASSWORD=Edgar@2025
+PODIO_CASOS_APP_ID=29608040
+PODIO_STAFF_APP_ID=29631140
+PODIO_STAFF_APP_TOKEN=aa7cfcac1a7b93df459b0d4222af7081
+PODIO_STAFF_USERNAME_FIELD_ID=nombre-de-usuario
+PODIO_STAFF_PASSWORD_FIELD_ID=contrasena
+PODIO_STAFF_ROLE_FIELD_ID=nivel
+PODIO_STAFF_STATUS_FIELD_ID=estatus
+PODIO_FILTROS_APP_ID=30469619
+PODIO_FILTROS_USER_FIELD_ID=273879847
+
+```
+
+## File: ./src/middleware.js
+```javascript
+import { withAuth } from "next-auth/middleware"
+
+export default withAuth({
+  callbacks: {
+    authorized: ({ token }) => !!token,
+  },
+})
+
+export const config = {
+  matcher: ["/dashboard/:path*"],
+}
+```
+
+## File: ./src/app/layout.js
+```javascript
+import "./globals.css";
+import Providers from "../components/Providers";
+import { Toaster } from "react-hot-toast";
+
+export const metadata = {
+  title: "MLA Dashboard",
+  description: "Internal dashboard for Medina, Luna & Asociados",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <Providers>
+          <Toaster /> 
+          {children}
+        </Providers>
+      </body>
+    </html>
+  );
+}
+```
+
+## File: ./src/app/page.js
+```javascript
+'use client'
+
+import { useSession, signIn, signOut } from "next-auth/react"
+
+export default function HomePage() {
+  const { data: session } = useSession()
+
+  if (session) {
+    return (
+      <main className="flex min-h-screen flex-col items-center justify-center">
+        <h1 className="text-4xl font-bold">
+          Welcome to the MLA Dashboard, {session.user.name}!
+        </h1>
+        <button 
+          onClick={() => signOut()} 
+          className="mt-4 rounded-md bg-red-600 px-4 py-2 text-white"
+        >
+          Sign Out
+        </button>
+      </main>
+    )
+  }
+
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold">
+        MLA Dashboard
+      </h1>
+      <p className="mt-2 text-lg">
+        Please sign in to continue.
+      </p>
+      <button 
+        onClick={() => signIn(undefined, { callbackUrl: '/dashboard' })} // <-- Change is here
+        className="mt-4 rounded-md bg-blue-600 px-4 py-2 text-white"
+      >
+        Sign In
+      </button>
+    </main>
+  )
+}
+```
+
+## File: ./src/app/dashboard/layout.js
+```javascript
+// src/app/dashboard/layout.js
+'use client';
+
+import SignOutButton from '@/components/SignOutButton';
+import SidebarNav from '@/components/SidebarNav';
+import { SidebarProvider, useSidebar } from '@/context/SidebarContext';
+import CasosProyectosPanel from '@/components/CasosProyectosPanel';
+import CasosDetailFilterPanel from '@/components/CasosDetailFilterPanel';
+
+const navigation = [
+  { name: 'Panel', href: '/dashboard' },
+  { name: 'Casos', href: '/dashboard/casos' },
+  { name: 'Contactos', href: '/dashboard/contactos' },
+  { name: 'Tareas', href: '/dashboard/tareas' },
+  { name: 'Staff', href: '/dashboard/staff' },
+  { name: 'Panel de Admin', href: '/dashboard/admin' },
+];
+
+function Sidebar() {
+  const { sidebarView } = useSidebar();
+
+  const renderSidebarContent = () => {
+    switch(sidebarView) {
+      case 'casosDashboard':
+        return <CasosProyectosPanel />;
+      case 'casosDetailFilters':
+        return <CasosDetailFilterPanel />;
+      case 'main':
+      default:
+        return <SidebarNav links={navigation} />;
+    }
+  }
+
+  return (
+    <div className="flex flex-col h-full bg-slate-800">
+      <div className="flex h-16 shrink-0 items-center px-6">
+        <h1 className="text-2xl font-bold text-white">DataLink Web</h1>
+      </div>
+      
+      <nav className="flex-1 overflow-y-auto px-6 py-4">
+        {renderSidebarContent()}
+      </nav>
+
+      <div className="shrink-0">
+        <div className="px-6 py-4 text-sm leading-6 text-gray-200 border-t border-slate-700">
+          <p className="font-semibold">Edgar</p>
+          <p className="text-xs font-light text-gray-400 mb-2">edgar.asistente.medina@gmail.com</p>
+          <SignOutButton />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function DashboardLayout({ children }) {
+  return (
+    <SidebarProvider>
+      <div className="h-screen flex">
+        <div className="flex w-64 flex-col fixed inset-y-0 z-50">
+          <Sidebar />
+        </div>
+        <main className="flex-1 pl-64">
+          {children}
+        </main>
+      </div>
+    </SidebarProvider>
+  );
+}
+```
+
+## File: ./src/app/dashboard/page.js
+```javascript
+'use client';
+
+import { useState } from 'react';
+
+const views = [
+  { id: 1, name: 'Todos los Casos Activos' },
+  { id: 2, name: 'Mis Casos Asignados' },
+  { id: 3, name: 'Cerrando Este Mes' },
+];
+
+export default function DashboardPage() {
+  const [selectedView, setSelectedView] = useState(views[0]);
+
+  return (
+    <div className="flex h-full rounded-lg bg-white shadow-md">
+      <aside className="w-1/4 flex-shrink-0 border-r border-gray-200">
+        <div className="p-4">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Vistas</h2>
+          <ul>
+            {views.map((view) => (
+              <li key={view.id} className="mb-1">
+                <button
+                  onClick={() => setSelectedView(view)}
+                  className={`w-full text-left rounded-md p-2 text-sm ${
+                    selectedView.id === view.id
+                      ? 'bg-indigo-50 text-indigo-700 font-semibold'
+                      : 'text-gray-600 hover:bg-gray-50'
+                  }`}
+                >
+                  {view.name}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </aside>
+      <main className="flex-1 p-8">
+        <h1 className="text-2xl font-bold">{selectedView.name}</h1>
+        <p className="mt-2 text-gray-600">
+          Una tabla con los items de esta vista se mostrará aquí.
+        </p>
+      </main>
+    </div>
+  );
+}
+```
+
+## File: ./src/app/dashboard/casos/page.js
+```javascript
+// src/app/dashboard/casos/page.js
+'use client';
+
+import { useEffect } from 'react';
+import { useSidebar } from '@/context/SidebarContext';
+
+const stats = [
+    { name: 'Más Allá de Loss Mitigation', stat: '1,198' },
+    { name: 'Bienes Raíces con Sensibilidad', stat: '243' },
+    { name: 'Soluciones a Alquileres Defectuosos', stat: '52' },
+];
+
+export default function CasosDashboardPage() {
+    const { setSidebarView } = useSidebar();
+
+    useEffect(() => {
+        // --- ADD THIS LOG ---
+        console.log("Casos Dashboard Page: Telling sidebar to change to 'casosDashboard'");
+        
+        setSidebarView('casosDashboard');
+        return () => setSidebarView('main');
+    }, [setSidebarView]);
+
+    return (
+        <div className="p-4 sm:p-6 lg:p-8">
+            <h1 className="text-2xl font-bold text-gray-900">Resumen de Casos</h1>
+
+            <div className="mt-6">
+                <dl className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+                    {stats.map((item) => (
+                        <div key={item.name} className="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6">
+                            <dt className="truncate text-sm font-medium text-gray-500">{item.name}</dt>
+                            <dd className="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{item.stat}</dd>
+                        </div>
+                    ))}
+                </dl>
+            </div>
+        </div>
+    );
+}
+```
+
+## File: ./src/app/dashboard/casos/[proyectoSlug]/page.js
+```javascript
+// src/app/dashboard/casos/[proyectoSlug]/page.js
+'use client';
+
+import { useState, useEffect, useMemo } from 'react';
+import Link from 'next/link';
+import { toast } from 'react-hot-toast';
+import CasosTable from '@/components/CasosTable';
+import { useSidebar } from '@/context/SidebarContext';
+
+const projectNames = {
+    'mas-alla': 'Más Allá de Loss Mitigation',
+    'bienes-raices': 'Bienes Raíces con Sensibilidad',
+    'alquileres': 'Soluciones a Alquileres Defectuosos'
+};
+
+const projectMainFilters = {
+    'mas-alla': { proyecto: 1 },
+    'bienes-raices': { proyecto: 2 },
+    'alquileres': { proyecto: 3 }
+};
+
+export default function CasosListPage({ params }) {
+  const { setSidebarView, activeCasosFilter, setActiveCasosFilter, activeCasosSubFilter, setActiveCasosSubFilter } = useSidebar();
+
+  const [allCasos, setAllCasos] = useState([]);
+  const [totalItems, setTotalItems] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isFullyLoaded, setIsFullyLoaded] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [loadingStatus, setLoadingStatus] = useState('Initializing...');
+
+  const LIMIT = 100;
+  const projectName = projectNames[params.proyectoSlug] || 'Casos';
+
+  useEffect(() => {
+    setSidebarView('casosDetailFilters');
+    setActiveCasosFilter({ id: params.proyectoSlug, name: projectName });
+    return () => {
+      setActiveCasosFilter(null);
+      setActiveCasosSubFilter(null);
+      setSidebarView('main');
+    };
+  }, [setSidebarView, setActiveCasosFilter, setActiveCasosSubFilter, params.proyectoSlug, projectName]);
+
+  useEffect(() => {
+    if (!activeCasosSubFilter) return;
+
+    const fetchAllData = async () => {
+      setIsLoading(true);
+      setIsFullyLoaded(false);
+      setAllCasos([]);
+      setTotalItems(0);
+      setSearchTerm('');
+      
+      let collectedItems = [];
+      let currentOffset = 0;
+      let totalCount = 0;
+
+      try {
+        const mainFilter = projectMainFilters[params.proyectoSlug] || {};
+        const subFilter = activeCasosSubFilter.query.filters || {};
+        const mergedFilters = { ...mainFilter, ...subFilter };
+
+        setLoadingStatus('Cargando casos iniciales...');
+        const initialResponse = await fetch('/api/casos/filter', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ filters: mergedFilters, limit: LIMIT, offset: 0 }),
+        });
+        if (!initialResponse.ok) throw new Error('Failed to fetch initial items');
+        
+        const initialData = await initialResponse.json();
+        collectedItems = initialData.items;
+        totalCount = initialData.total;
+        
+        setAllCasos(collectedItems);
+        setTotalItems(totalCount);
+        setIsLoading(false);
+
+        if (collectedItems.length >= totalCount) {
+          setIsFullyLoaded(true);
+          setLoadingStatus(totalCount > 0 ? `Todos los ${totalCount} casos cargados.` : 'No se encontraron casos.');
+          return;
+        }
+
+        currentOffset = collectedItems.length;
+        while (currentOffset < totalCount) {
+          setLoadingStatus(`Cargando ${currentOffset} de ${totalCount}...`);
+          const response = await fetch('/api/casos/filter', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ filters: mergedFilters, limit: LIMIT, offset: currentOffset }),
+          });
+          if (!response.ok) break;
+          const data = await response.json();
+          if (data.items.length === 0) break;
+          
+          setAllCasos(prev => {
+            const combined = [...prev, ...data.items];
+            const uniqueItems = Array.from(new Map(combined.map(item => [item.item_id, item])).values());
+            return uniqueItems;
+          });
+          
+          currentOffset = Array.from(new Map(collectedItems.map(item => [item.item_id, item])).values()).length;
+          await new Promise(res => setTimeout(res, 1));
+        }
+
+      } catch (error) {
+        toast.error(error.message);
+        setIsLoading(false);
+      } finally {
+        setIsFullyLoaded(true);
+        if (totalCount > 0) {
+            setLoadingStatus(`Todos los ${totalCount} casos cargados.`);
+        } else {
+            setLoadingStatus('No se encontraron casos.');
+        }
+      }
+    };
+
+    fetchAllData();
+  }, [activeCasosSubFilter, params.proyectoSlug]);
+
+  const filteredCasos = useMemo(() => {
+    if (!searchTerm) return allCasos;
+    return allCasos.filter(caso =>
+      caso.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [allCasos, searchTerm]);
+
+  const handleDelete = async (caseId) => {
+    if (window.confirm('Are you sure you want to delete this case?')) {
+      try {
+        await fetch(`/api/casos/${caseId}`, { method: 'DELETE' });
+        toast.success('Caso borrado exitosamente!');
+        setAllCasos(current => current.filter(caso => caso.item_id !== caseId));
+        setTotalItems(prevTotal => prevTotal - 1);
+      } catch (error) {
+        toast.error(error.message);
+      }
+    }
+  };
+
+  return (
+    <div className="flex flex-col h-screen">
+      <div className="flex-shrink-0 border-b border-gray-200 p-4 sm:p-6 lg:p-8">
+        <div className="sm:flex sm:items-center">
+          <div className="sm:flex-auto">
+            <h1 className="text-2xl font-bold text-gray-900">{projectName}</h1>
+            <p className="mt-1 text-sm text-gray-500">
+              {activeCasosSubFilter?.name}: Mostrando <strong>{filteredCasos.length}</strong> resultados. ({loadingStatus})
+            </p>
+          </div>
+          <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
+            <Link href={`/dashboard/casos/${params.proyectoSlug}/new`}>
+              <button type="button" className="block rounded-md bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500">
+                Añadir Nuevo Caso
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="mt-4">
+          <input
+            type="search"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm p-2"
+            placeholder="Filtrar casos cargados..."
+            disabled={!isFullyLoaded}
+          />
+        </div>
+      </div>
+      <div className="flex-grow overflow-y-auto p-4 sm:p-6 lg:p-8">
+        {isLoading ? (
+          <p>Cargando casos iniciales...</p>
+        ) : (
+          <CasosTable casos={filteredCasos} handleDelete={handleDelete} />
+        )}
+      </div>
+    </div>
+  );
+}
+```
+
+## File: ./src/app/dashboard/casos/[proyectoSlug]/proyectos-config.js
+```javascript
+// src/app/dashboard/casos/[proyectoSlug]/proyectos-config.js
+
+export const proyectosConfig = {
+  'mas-alla': {
+    name: 'Más Allá de Loss Mitigation',
+    mainFilter: { filters: { proyecto: 1 } },
+    subFilters: [
+      { id: 'all', name: 'Todos los Casos', podioQuery: {} },
+      { id: 'activo', name: 'Casos Activos', podioQuery: { filters: { 'estatus-de-record': 1 } } },
+      { id: 'inactivo', name: 'Casos Inactivos', podioQuery: { filters: { 'estatus-de-record': 2 } } },
+    ]
+  },
+  'bienes-raices': {
+    name: 'Bienes Raíces con Sensibilidad',
+    mainFilter: { filters: { proyecto: 2 } },
+    subFilters: [
+      { id: 'all', name: 'Todos los Casos', podioQuery: {} },
+      // Add specific sub-filters for this project later
+    ]
+  },
+  'alquileres': {
+    name: 'Soluciones a Alquileres Defectuosos',
+    mainFilter: { filters: { proyecto: 3 } },
+    subFilters: [
+      { id: 'all', name: 'Todos los Casos', podioQuery: {} },
+      // Add specific sub-filters for this project later
+    ]
+  }
+};
+```
+
+## File: ./src/app/dashboard/casos/[proyectoSlug]/form-layout.js
+```javascript
+// src/app/dashboard/casos/form-layout.js
+
+export const formLayout = {
+  // Add the external_id of any field you want to hide completely.
+  hiddenFields: [
+    'field-to-hide-1', 
+    'field-to-hide-2'
+  ],
+
+  // Define the sections of your form.
+  sections: [
+    {
+      title: 'Información Principal del Caso',
+      rows: [
+        {
+          columns: 4,
+          fields: [
+            { id: 'proyecto' },
+            { id: 'title' },
+            { id: 'estatus-de-record' },
+            { id: 'tribunal-2' }
+          ]
+        },
+        {
+          columns: 4,
+          fields: [
+            { id: 'fecha-demanda' },
+            { id: 'fecha-presentacion-demanda' },
+            { id: 'fecha-entrada-record' }
+          ]
+        },
+        {
+            columns: 2,
+            fields: [
+                { id: 'estatus-de-record' }, // Estatus de Record
+                { id: 'tipo-de-emplazamiento' } // Tipo de Emplazamiento
+            ]
+        }
+      ]
+    },
+    {
+      title: 'Información de la Propiedad',
+      rows: [
+        {
+          columns: 1,
+          fields: [
+            { id: 'propiedad' } // Dirección de la Propiedad
+          ]
+        },
+        {
+          columns: 3,
+          fields: [
+            { id: 'pueblo2' },     // Pueblo
+            { id: 'finca' },       // Finca
+            { id: 'pagare-original' } // Pagaré Original
+          ]
+        }
+      ]
+    },
+    {
+        title: 'Fechas y Cuantías',
+        rows: [
+            {
+                columns: 2,
+                fields: [
+                    { id: 'fecha-demanda' }, // Fecha Demanda
+                    { id: 'fecha-pagare-original' } // Fecha Pagaré Original
+                ]
+            },
+            {
+                columns: 2,
+                fields: [
+                    { id: 'cuantia-demanda' }, // Cuantía Demanda
+                    { 
+                        id: 'fecha-resolucion-solo-herencias', // Asumo este es el external_id
+                        // This is our conditional rule
+                        showWhen: { 
+                            fieldId: 'proyecto', 
+                            // IMPORTANT: Replace '1' with the real ID for "Bienes Raíces con Sensibilidad"
+                            hasValue: 2 
+                        } 
+                    }
+                ]
+            }
+        ]
+    },
+    {
+      title: 'Partes Relacionadas',
+      rows: [
+        {
+          columns: 1,
+          fields: [
+            { id: 'contactos' } // This is a relational field
+          ]
+        },
+        {
+            columns: 1,
+            fields: [
+              { id: 'nombre-demandados' } // Nombre Demandado(s)
+            ]
+          }
+      ]
+    }
+  ]
+};
+```
+
+## File: ./src/app/dashboard/casos/[proyectoSlug]/loading.js
+```javascript
+export default function Loading() {
+  // This is a "loading skeleton" of the page.
+  return (
+    <div>
+      <div className="sm:flex sm:items-center">
+        <div className="sm:flex-auto">
+          <h1 className="text-3xl font-bold text-gray-900">
+            All Cases
+          </h1>
+        </div>
+        <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+          <div className="block rounded-md bg-gray-300 py-2 px-4 h-9 w-32 animate-pulse"></div>
+        </div>
+      </div>
+      
+      <div className="mt-8 flow-root">
+        <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
+          <div className="h-96 w-full rounded-lg bg-gray-300 animate-pulse"></div>
+        </div>
+      </div>
+    </div>
+  )
+}
+```
+
+## File: ./src/app/dashboard/casos/[proyectoSlug]/new/page.js
+```javascript
+// src/app/dashboard/casos/new/page.js
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { toast } from 'react-hot-toast';
+import CasoForm from '../../../../components/CasoForm';
+
+export default function NewCasoPage() {
+  const [appTemplate, setAppTemplate] = useState(null);
+  const [formData, setFormData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const fetchAppTemplate = async () => {
+      try {
+        const response = await fetch('/api/podio/app-template');
+        if (!response.ok) throw new Error('Failed to fetch app template');
+        const data = await response.json();
+        setAppTemplate(data);
+      } catch (err) {
+        setError(err.message);
+        toast.error(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchAppTemplate();
+  }, []);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // ... (logic to format data before sending)
+    const formattedData = { ...formData };
+    for (const key in formattedData) {
+      const value = formattedData[key];
+      if (value && typeof value === 'object' && !Array.isArray(value) && value.hasOwnProperty('value')) {
+        formattedData[key] = value.value;
+      } else if (Array.isArray(value)) {
+        formattedData[key] = value.map(item => item.value);
+      }
+    }
+    
+    try {
+      const response = await fetch('/api/casos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formattedData),
+      });
+      if (!response.ok) throw new Error('Failed to create case');
+      toast.success('Case created successfully!');
+      router.push('/dashboard/casos');
+      router.refresh();
+    } catch (err) {
+      toast.error(err.message);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (isLoading) return <div className="p-8">Loading form...</div>;
+  if (error) return <div className="p-8 text-red-500">Error: {error}</div>;
+
+  return (
+    <CasoForm
+      appTemplate={appTemplate}
+      formData={formData}
+      handleInputChange={handleInputChange}
+      handleSubmit={handleSubmit}
+      isSubmitting={isSubmitting}
+      pageTitle="Añadir Nuevo Caso"
+    />
+  );
+}
+```
+
+## File: ./src/app/dashboard/casos/[proyectoSlug]/[caseId]/page.js
+```javascript
+// src/app/dashboard/casos/[caseId]/page.js
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { toast } from 'react-hot-toast';
+import CasoForm from '../../../../components/CasoForm';
+
+const transformPodioItemToFormData = (podioItem) => {
+  const formData = {};
+  if (!podioItem || !podioItem.fields) return formData;
+  for (const field of podioItem.fields) {
+    const { external_id, type, values } = field;
+    if (!values || values.length === 0) continue;
+    switch (type) {
+      case 'date':
+        formData[external_id] = values[0].start_date;
+        break;
+      case 'category':
+        formData[external_id] = values[0].value.id;
+        break;
+      case 'app':
+        const isMulti = field.config.settings.multiple;
+        if (isMulti) {
+          formData[external_id] = values.map(v => ({ value: v.value.item_id, label: v.value.title }));
+        } else {
+          formData[external_id] = { value: values[0].value.item_id, label: values[0].value.title };
+        }
+        break;
+      default:
+        formData[external_id] = values[0].value;
+        break;
+    }
+  }
+  return formData;
+};
+
+export default function EditCasoPage({ params }) {
+  const { caseId } = params;
+  const [appTemplate, setAppTemplate] = useState(null);
+  const [formData, setFormData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [templateRes, itemRes] = await Promise.all([
+          fetch('/api/podio/app-template'),
+          fetch(`/api/casos/${caseId}`),
+        ]);
+        if (!templateRes.ok) throw new Error('Failed to fetch app template');
+        if (!itemRes.ok) throw new Error('Failed to fetch case data');
+        const templateData = await templateRes.json();
+        const itemData = await itemRes.json();
+        setAppTemplate(templateData);
+        setFormData(transformPodioItemToFormData(itemData));
+      } catch (err) {
+        setError(err.message);
+        toast.error(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }, [caseId]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // ... (logic to format data before sending)
+    const formattedData = { ...formData };
+    for (const key in formattedData) {
+        const value = formattedData[key];
+        if (value && typeof value === 'object' && !Array.isArray(value) && value.hasOwnProperty('value')) {
+            formattedData[key] = value.value;
+        } else if (Array.isArray(value)) {
+            formattedData[key] = value.map(item => item.value);
+        }
+    }
+
+    try {
+      const response = await fetch(`/api/casos/${caseId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formattedData),
+      });
+      if (!response.ok) throw new Error('Failed to update case');
+      toast.success('Case updated successfully!');
+      router.push('/dashboard/casos');
+      router.refresh();
+    } catch (err) {
+      toast.error(err.message);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (isLoading) return <div className="p-8">Loading case data...</div>;
+  if (error) return <div className="p-8 text-red-500">Error: {error}</div>;
+
+  return (
+    <CasoForm
+      appTemplate={appTemplate}
+      formData={formData}
+      handleInputChange={handleInputChange}
+      handleSubmit={handleSubmit}
+      isSubmitting={isSubmitting}
+      pageTitle="Edit Case"
+      caseId={caseId}
+    />
+  );
+}
+```
+
+## File: ./src/app/dashboard/casos/[proyectoSlug]/[caseId]/edit/page.js
+```javascript
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { toast } from 'react-hot-toast';
+
+// Helper function to strip HTML for text inputs
+function stripHtml(html) {
+  if (!html || typeof window === 'undefined') return '';
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  return doc.body.textContent || "";
+}
+
+export default function EditCasePage({ params }) {
+  const [formData, setFormData] = useState({
+    title: '',
+    proyecto: '',
+    estatusDeRecord: '',
+    fechaDemanda: '',
+    demandante: '',
+    tipoDeEmplazamiento: '',
+    nombreDemandados: '',
+    propiedad: '',
+    pueblo2: '',
+    finca: '',
+    pagareOriginal: '',
+    fechaPagareOriginal: '',
+    cuantiaDemanda: '',
+  });
+  const [isLoading, setIsLoading] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [error, setError] = useState('');
+  const router = useRouter();
+  const { caseId } = params;
+
+  useEffect(() => {
+    const fetchCaseData = async () => {
+      try {
+        const response = await fetch(`/api/casos/${caseId}`);
+        if (!response.ok) throw new Error('Failed to fetch case data');
+        const data = await response.json();
+        
+        const getFieldValue = (externalId) => {
+          const field = data.fields.find(f => f.external_id === externalId);
+          if (!field || !field.values || field.values.length === 0) return '';
+          const firstValue = field.values[0];
+          if (firstValue.start_date) return firstValue.start_date.split(' ')[0];
+          const fieldValue = firstValue.value;
+          if (typeof fieldValue === 'object' && fieldValue !== null && fieldValue.text) return fieldValue.text;
+          if (typeof fieldValue === 'object' && fieldValue !== null && fieldValue.title) return fieldValue.title;
+          return fieldValue;
+        };
+
+        setFormData({
+          title: data.title || '',
+          proyecto: getFieldValue('proyecto') || '',
+          estatusDeRecord: getFieldValue('estatus-de-record') || '',
+          fechaDemanda: getFieldValue('fecha-demanda') || '',
+          demandante: getFieldValue('demandante') || '',
+          tipoDeEmplazamiento: getFieldValue('tipo-de-emplazamiento') || '',
+          nombreDemandados: stripHtml(getFieldValue('nombre-demandados')) || '',
+          propiedad: stripHtml(getFieldValue('propiedad')) || '',
+          pueblo2: getFieldValue('pueblo-2') || '',
+          finca: getFieldValue('finca') || '',
+          pagareOriginal: getFieldValue('pagare-original') || '',
+          fechaPagareOriginal: getFieldValue('fecha-pagare-original') || '',
+          cuantiaDemanda: getFieldValue('cuantia-demanda') || '',
+        });
+
+      } catch (err) {
+        setError(err.message);
+        toast.error(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    fetchCaseData();
+  }, [caseId]);
+  
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
+    try {
+      const response = await fetch(`/api/casos/${caseId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.details || 'Failed to update case');
+      }
+      toast.success('Case updated successfully!');
+      router.push('/dashboard/casos');
+    } catch (err) {
+      toast.error(err.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleDelete = async () => {
+    if (window.confirm('Are you sure you want to permanently delete this case?')) {
+      setIsDeleting(true);
+      try {
+        const response = await fetch(`/api/casos/${caseId}`, { method: 'DELETE' });
+        if (!response.ok) throw new Error('Failed to delete case');
+        toast.success('Case deleted successfully');
+        router.push('/dashboard/casos');
+      } catch (error) {
+        toast.error(error.message);
+        setIsDeleting(false);
+      }
+    }
+  };
+  
+  if (isLoading) return <div className="p-8">Loading case data...</div>;
+  if (error) return <div className="p-8 text-red-600">Error: {error}</div>;
+
+  return (
+    <div>
+      <h1 className="text-3xl font-bold text-gray-900">Edit Case</h1>
+      <div className="mt-8 max-w-4xl">
+        <div className="rounded-lg bg-white p-8 shadow-md">
+          <form onSubmit={handleSubmit}>
+            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2">
+              <div><label htmlFor="title" className="block text-sm font-medium text-gray-700">Número Caso</label><input id="title" name="title" type="text" required value={formData.title} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div><label htmlFor="proyecto" className="block text-sm font-medium text-gray-700">Proyecto (Category)</label><input id="proyecto" name="proyecto" type="text" required value={formData.proyecto} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div><label htmlFor="estatusDeRecord" className="block text-sm font-medium text-gray-700">Estatus de Record (Category)</label><input id="estatusDeRecord" name="estatusDeRecord" type="text" required value={formData.estatusDeRecord} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div><label htmlFor="fechaDemanda" className="block text-sm font-medium text-gray-700">Fecha Demanda</label><input id="fechaDemanda" name="fechaDemanda" type="date" required value={formData.fechaDemanda} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div className="sm:col-span-2"><label htmlFor="demandante" className="block text-sm font-medium text-gray-700">Demandante</label><input id="demandante" name="demandante" type="text" required value={formData.demandante} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div><label htmlFor="tipoDeEmplazamiento" className="block text-sm font-medium text-gray-700">Tipo de Emplazamiento (Category)</label><input id="tipoDeEmplazamiento" name="tipoDeEmplazamiento" type="text" required value={formData.tipoDeEmplazamiento} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div className="sm:col-span-2"><label htmlFor="nombreDemandados" className="block text-sm font-medium text-gray-700">Nombre Demandado</label><textarea id="nombreDemandados" name="nombreDemandados" required value={formData.nombreDemandados} onChange={handleInputChange} rows={3} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div className="sm:col-span-2"><label htmlFor="propiedad" className="block text-sm font-medium text-gray-700">Dirección de la Propiedad</label><textarea id="propiedad" name="propiedad" required value={formData.propiedad} onChange={handleInputChange} rows={3} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div><label htmlFor="pueblo2" className="block text-sm font-medium text-gray-700">Pueblo (Reference)</label><input id="pueblo2" name="pueblo2" type="text" required value={formData.pueblo2} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div><label htmlFor="finca" className="block text-sm font-medium text-gray-700">Finca</label><input id="finca" name="finca" type="text" required value={formData.finca} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div><label htmlFor="pagareOriginal" className="block text-sm font-medium text-gray-700">Pagaré Original (Money)</label><input id="pagareOriginal" name="pagareOriginal" type="number" step="0.01" required value={formData.pagareOriginal} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div><label htmlFor="fechaPagareOriginal" className="block text-sm font-medium text-gray-700">Fecha Pagaré Original</label><input id="fechaPagareOriginal" name="fechaPagareOriginal" type="date" required value={formData.fechaPagareOriginal} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+              <div><label htmlFor="cuantiaDemanda" className="block text-sm font-medium text-gray-700">Cuantía Demanda (Money)</label><input id="cuantiaDemanda" name="cuantiaDemanda" type="number" step="0.01" required value={formData.cuantiaDemanda} onChange={handleInputChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" /></div>
+            </div>
+            
+            <div className="flex justify-between pt-8 items-center border-t mt-8">
+              <button
+                type="button"
+                onClick={handleDelete}
+                disabled={isDeleting || isLoading}
+                className="rounded-md bg-red-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-red-700 disabled:opacity-50"
+              >
+                {isDeleting ? 'Deleting...' : 'Delete Case'}
+              </button>
+
+              <button
+                type="submit"
+                disabled={isLoading || isDeleting}
+                className="rounded-md border border-transparent bg-green-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-green-700 disabled:opacity-50"
+              >
+                {isLoading ? 'Saving...' : 'Save Changes'}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+## File: ./src/app/login/page.js
+```javascript
+'use client'
+
+import { useState } from 'react'
+import { signIn } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
+
+export default function LoginPage() {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [isLoading, setIsLoading] = useState(false); // Added for consistency
+  const router = useRouter(); 
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
+
+    try {
+      // The main change is here. We set redirect to true and provide the callbackUrl.
+      const result = await signIn('credentials', {
+        redirect: true,
+        callbackUrl: '/dashboard',
+        username,
+        password,
+      });
+
+      // The 'result' will have an error if login fails.
+      // NextAuth.js handles the success redirect automatically.
+      if (result.error) {
+        setError('Invalid username or password. Please try again.');
+        setIsLoading(false);
+      }
+      
+    } catch (err) {
+      setError(err.message);
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
+      <div className="w-full max-w-xs rounded-lg bg-white p-6 shadow-md">
+        <h1 className="mb-4 text-center text-2xl font-bold text-gray-800">
+          Sign In
+        </h1>
+        
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username</label>
+            <input id="username" type="text" required value={username} onChange={(e) => setUsername(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" />
+          </div>
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+            <input id="password" type="password" required value={password} onChange={(e) => setPassword(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm" />
+          </div>
+          {error && <p className="text-sm text-red-600">{error}</p>}
+          <div className="flex justify-end pt-4">
+            <button type="submit" disabled={isLoading} className="w-full justify-center rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 disabled:opacity-50">
+              {isLoading ? 'Signing In...' : 'Sign In'}
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  );
+}
+```
+
+## File: ./src/app/api/podio/user-filters/route.js
+```javascript
+// src/app/api/podio/user-filters/route.js
+
+import { NextResponse } from 'next/server';
+import { getToken } from 'next-auth/jwt';
+
+async function getPodioAccessToken(req) {
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+  if (!token || !token.podioAccessToken) {
+    throw new Error('Podio access token not found.');
+  }
+  return token; // Return the full token
+}
+
+export async function GET(req) {
+  try {
+    const token = await getPodioAccessToken(req);
+    const accessToken = token.podioAccessToken;
+    const userId = token.sub; // The user's Item ID from the Staff App is in token.sub
+
+    if (!userId) {
+        throw new Error('User ID not found in session token.');
+    }
+
+    const filtrosAppId = process.env.PODIO_FILTROS_APP_ID;
+    const userFieldId = process.env.PODIO_FILTROS_USER_FIELD_ID;
+
+    const API_URL = `https://api.podio.com/item/app/${filtrosAppId}/filter/`;
+
+    const requestBody = {
+      filters: {
+        // This is the key part: we are filtering by the "Usuario Asignado" field
+        [userFieldId]: [parseInt(userId, 10)]
+      }
+    };
+
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `OAuth2 ${accessToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`Podio API request failed: ${errorData.error_description}`);
+    }
+    
+    const data = await response.json();
+    
+    // We need to re-format the filters into a clean structure for the frontend
+    const findField = (item, externalId) => item.fields.find(f => f.external_id === externalId);
+
+    const userFilters = data.items.map(item => {
+        const proyectoField = findField(item, 'proyecto');
+        const queryField = findField(item, 'consulta-podio-json');
+        const tipoField = findField(item, 'tipo-de-filtro');
+
+        return {
+            id: item.item_id,
+            name: item.title,
+            proyecto: proyectoField?.values[0]?.value?.text || null,
+            proyecto_id: proyectoField?.values[0]?.value?.id || null,
+            query: queryField ? JSON.parse(queryField.values[0].value) : {},
+            type: tipoField?.values[0]?.value?.text || 'Personalizado'
+        };
+    });
+
+    return NextResponse.json(userFilters);
+
+  } catch (error) {
+    console.error("--- CATCH BLOCK ERROR in /api/podio/user-filters ---", error);
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ message: 'Internal Server Error', error: errorMessage }, { status: 500 });
+  }
+}
+```
+
+## File: ./src/app/api/podio/search-items/route.js
+```javascript
+// src/app/api/podio/search-items/route.js
+
+import { NextResponse } from 'next/server';
+import { getToken } from 'next-auth/jwt';
+
+// ... (getPodioAccessToken function is unchanged)
+async function getPodioAccessToken(req) {
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+  if (!token || !token.podioAccessToken) {
+    throw new Error('Podio access token not found.');
+  }
+  return token.podioAccessToken;
+}
+
+export async function POST(req) {
+  try {
+    const accessToken = await getPodioAccessToken(req);
+    const { appId, searchText } = await req.json();
+
+    if (!appId || !searchText) {
+      return NextResponse.json([]);
+    }
+    
+    const queryParams = new URLSearchParams({
+      query: searchText,
+      limit: "25",
+      ref_type: "item",
+    });
+
+    const API_URL = `https://api.podio.com/search/app/${appId}/v2?${queryParams.toString()}`;
+
+    const response = await fetch(API_URL, {
+      method: 'GET', 
+      headers: { 'Authorization': `OAuth2 ${accessToken}` }
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`Podio API search failed: ${errorData.error_description}`);
+    }
+
+    const searchData = await response.json();
+    
+    // --- THE FIX IS HERE ---
+    // The results are in searchData.results, not searchData itself
+    const simplifiedItems = (searchData.results || []).map(result => ({
+      value: result.id,
+      label: result.title
+    }));
+
+    return NextResponse.json(simplifiedItems);
+
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ message: 'Internal Server Error', error: errorMessage }, { status: 500 });
+  }
+}
+```
+
+## File: ./src/app/api/podio/view-items/route.js
+```javascript
+// src/app/api/podio/view-items/route.js
+
+import { NextResponse } from 'next/server';
+import { getToken } from 'next-auth/jwt';
+
+async function getPodioAccessToken(req) {
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+  if (!token || !token.podioAccessToken) {
+    throw new Error('Podio access token not found.');
+  }
+  return token.podioAccessToken;
+}
+
+export async function POST(req) {
+  try {
+    const accessToken = await getPodioAccessToken(req);
+    // Now expecting limit and offset from the frontend
+    const { viewId, limit = 100, offset = 0 } = await req.json(); 
+
+    const PODIO_APP_ID = process.env.PODIO_CASOS_APP_ID;
+    
+    if (!viewId) {
+      return NextResponse.json({ message: 'View ID is required' }, { status: 400 });
+    }
+    
+    const API_URL = `https://api.podio.com/item/app/${PODIO_APP_ID}/filter/${viewId}/`;
+
+    // No more while loop, we make ONE request per call
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        Authorization: `OAuth2 ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        limit: limit,
+        offset: offset,
+      }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("!!! Podio API Error Response !!!", errorData); 
+      throw new Error(`Podio API request failed: ${errorData.error_description}`);
+    }
+    
+    const data = await response.json();
+    
+    // The Podio API response includes a 'total' count!
+    return NextResponse.json({
+        items: data.items || [],
+        total: data.filtered || 0,
+    });
+
+  } catch (error) {
+    console.error("--- CATCH BLOCK ERROR ---", error);
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ message: 'Internal Server Error', error: errorMessage }, { status: 500 });
+  }
+}
+```
+
+## File: ./src/app/api/podio/app-template/route.js
+```javascript
+// src/app/api/podio/app-template/route.js
+
+import { NextResponse } from 'next/server';
+import { getToken } from 'next-auth/jwt';
+
+async function getPodioAccessToken(req) {
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+  if (!token || !token.podioAccessToken) {
+    throw new Error('Podio access token not found.');
+  }
+  return token.podioAccessToken;
+}
+
+export async function GET(req) {
+  try {
+    const accessToken = await getPodioAccessToken(req);
+    const PODIO_APP_ID = process.env.PODIO_CASOS_APP_ID;
+
+    if (!PODIO_APP_ID) {
+      throw new Error("PODIO_CASOS_APP_ID is not defined in your environment variables.");
+    }
+
+    const API_URL = `https://api.podio.com/app/${PODIO_APP_ID}`;
+
+    const response = await fetch(API_URL, {
+      method: 'GET',
+      headers: {
+        Authorization: `OAuth2 ${accessToken}`,
+      },
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`Podio API request failed: ${errorData.error_description}`);
+    }
+
+    const appTemplate = await response.json();
+
+    return NextResponse.json(appTemplate);
+
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ message: 'Internal Server Error', error: errorMessage }, { status: 500 });
+  }
+}
+```
+
+## File: ./src/app/api/auth/[...nextauth]/route.js
+```javascript
+import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
+import bcrypt from "bcryptjs";
+
+// This function handles token refreshing
+async function refreshAccessToken(token) {
+  try {
+    const url = "https://api.podio.com/oauth/token";
+    const body = new URLSearchParams({
+      grant_type: "refresh_token",
+      client_id: process.env.PODIO_CLIENT_ID,
+      client_secret: process.env.PODIO_CLIENT_SECRET,
+      refresh_token: token.podioRefreshToken,
+    });
+
+    const response = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: body,
+    });
+
+    const refreshedTokens = await response.json();
+
+    if (!response.ok) throw refreshedTokens;
+
+    return {
+      ...token,
+      podioAccessToken: refreshedTokens.access_token,
+      podioAccessTokenExpiresAt: Date.now() + refreshedTokens.expires_in * 1000,
+      podioRefreshToken: refreshedTokens.refresh_token ?? token.podioRefreshToken,
+    };
+  } catch (error) {
+    console.error("Error refreshing access token:", error);
+    return { ...token, error: "RefreshAccessTokenError" };
+  }
+}
+
+export const authOptions = {
+  providers: [
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {
+        username: { label: "Username", type: "text" },
+        password: { label: "Password", type: "password" }
+      },
+      async authorize(credentials) {
+        try {
+          console.log("🚀 Auth Process Started for:", credentials?.username);
+
+          // 1. MASTER AUTHENTICATION
+          console.log("--- [STEP 1]: Master Podio Authentication ---");
+          const masterAuthResponse = await fetch('https://api.podio.com/oauth/token', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({
+              grant_type: 'password', 
+              client_id: process.env.PODIO_CLIENT_ID, 
+              client_secret: process.env.PODIO_CLIENT_SECRET,
+              username: process.env.PODIO_USERNAME, 
+              password: process.env.PODIO_PASSWORD,
+            }),
+          });
+
+          if (!masterAuthResponse.ok) {
+            const errorData = await masterAuthResponse.json();
+            console.error("❌ MASTER AUTH FAILED:", errorData);
+            throw new Error('Podio master authentication failed');
+          }
+          
+          const masterAuthData = await masterAuthResponse.json();
+          const masterAccessToken = masterAuthData.access_token;
+          console.log("✅ Master Auth Success");
+
+          // 2. SEARCH FOR USER IN STAFF APP
+          console.log("--- [STEP 2]: Searching Staff App ---");
+          const filterBody = { 
+            filters: { [process.env.PODIO_STAFF_USERNAME_FIELD_ID]: credentials.username }, 
+            limit: 1 
+          };
+          
+          const searchResponse = await fetch(`https://api.podio.com/item/app/${process.env.PODIO_STAFF_APP_ID}/filter/`, {
+            method: 'POST',
+            headers: { 
+                'Authorization': `OAuth2 ${masterAccessToken}`, 
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify(filterBody)
+          });
+
+          if (!searchResponse.ok) {
+            console.error("❌ STAFF SEARCH FAILED. Check PODIO_STAFF_APP_ID or Field IDs.");
+            throw new Error('Podio user search failed');
+          }
+          
+          const searchData = await searchResponse.json();
+          if (searchData.items.length === 0) {
+            console.warn("⚠️ User not found in Staff App.");
+            return null;
+          }
+
+          const staffItem = searchData.items[0];
+          const findField = (externalId) => staffItem.fields.find(f => f.external_id === externalId);
+          
+          const storedPasswordHash = findField(process.env.PODIO_STAFF_PASSWORD_FIELD_ID)?.values[0]?.value;
+          const role = findField(process.env.PODIO_STAFF_ROLE_FIELD_ID)?.values[0]?.value?.text;
+          const status = findField(process.env.PODIO_STAFF_STATUS_FIELD_ID)?.values[0]?.value?.text;
+          
+          console.log(`--- [STEP 3]: Verification (Role: ${role}, Status: ${status}) ---`);
+
+          if (!storedPasswordHash || !role || !status) {
+            console.error("❌ Missing required fields in Staff App item.");
+            return null;
+          }
+          
+          // 3. BCRYPT PASSWORD CHECK
+          const passwordsMatch = await bcrypt.compare(credentials.password, storedPasswordHash);
+
+          if (passwordsMatch && status === 'Activo') {
+            console.log("--- [STEP 4]: Final User-Specific Auth ---");
+            const userAuthResponse = await fetch('https://api.podio.com/oauth/token', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams({
+                grant_type: 'password',
+                client_id: process.env.PODIO_CLIENT_ID,
+                client_secret: process.env.PODIO_CLIENT_SECRET,
+                username: credentials.username,
+                password: credentials.password,
+              }),
+            });
+
+            if (!userAuthResponse.ok) {
+              const userError = await userAuthResponse.json();
+              console.error("❌ USER-SPECIFIC AUTH FAILED:", userError);
+              throw new Error('Failed to get user-specific Podio token');
+            }
+
+            const userAuthData = await userAuthResponse.json();
+            console.log("✅ LOGIN SUCCESSFUL");
+            
+            const emailField = staffItem.fields.find(f => f.type === 'email');
+            return {
+              id: staffItem.item_id,
+              name: staffItem.title,
+              email: emailField ? emailField.values[0].value : null,
+              role: role.toLowerCase(),
+              podioAccessToken: userAuthData.access_token,
+              podioRefreshToken: userAuthData.refresh_token,
+              podioAccessTokenExpiresAt: Date.now() + userAuthData.expires_in * 1000,
+            };
+          } else {
+            console.warn("❌ Password mismatch or User Inactive.");
+          }
+          return null;
+        } catch (error) {
+          console.error("⛔ CRITICAL AUTHORIZE ERROR:", error.message);
+          return null;
+        }
+      }
+    }),
+  ],
+  pages: { signIn: '/login' },
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.role = user.role;
+        token.podioAccessToken = user.podioAccessToken;
+        token.podioRefreshToken = user.podioRefreshToken;
+        token.podioAccessTokenExpiresAt = user.podioAccessTokenExpiresAt;
+        return token;
+      }
+      
+      const buffer = 60 * 1000;
+      if (Date.now() < token.podioAccessTokenExpiresAt - buffer) {
+        return token;
+      }
+
+      console.log("🔄 Token expired. Refreshing...");
+      return refreshAccessToken(token);
+    },
+    async session({ session, token }) {
+      if (session?.user) {
+        session.user.role = token.role;
+      }
+      session.podioAccessToken = token.podioAccessToken;
+      session.error = token.error;
+      return session;
+    },
+  },
+  secret: process.env.NEXTAUTH_SECRET,
+};
+
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
+```
+
+## File: ./src/app/api/casos/route.js
+```javascript
+// src/app/api/casos/route.js
+
+import { NextResponse } from 'next/server';
+import { getToken } from 'next-auth/jwt';
+
+// Helper function to get the app template
+async function getAppTemplate(accessToken, appId) {
+  const response = await fetch(`https://api.podio.com/app/${appId}`, {
+    headers: { Authorization: `OAuth2 ${accessToken}` },
+  });
+  if (!response.ok) throw new Error('Failed to fetch app template');
+  return await response.json();
+}
+
+export async function POST(req) {
+  try {
+    const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+    if (!token || !token.podioAccessToken) {
+      return NextResponse.json({ message: 'Not authenticated' }, { status: 401 });
+    }
+
+    const formData = await req.json();
+    const appId = process.env.PODIO_CASOS_APP_ID;
+
+    // 1. Get the app blueprint to know the type of each field
+    const appTemplate = await getAppTemplate(token.podioAccessToken, appId);
+
+    // 2. Build the correctly formatted 'fields' object for Podio
+    const fields = {};
+    for (const external_id in formData) {
+      const value = formData[external_id];
+      const field = appTemplate.fields.find(f => f.external_id === external_id);
+
+      if (field && value) {
+        switch (field.type) {
+          case 'date':
+            // Dates must be in an object with a 'start' key
+            fields[external_id] = { start: value };
+            break;
+          case 'money':
+            // Money fields should be converted to numbers
+            fields[external_id] = parseFloat(value);
+            break;
+          case 'category':
+          case 'app':
+             // Category and App References need to be item_ids (numbers)
+             // Our form already sends the ID, but let's ensure it's a number/array of numbers
+            if (Array.isArray(value)) {
+              fields[external_id] = value.map(id => parseInt(id, 10));
+            } else {
+              fields[external_id] = parseInt(value, 10);
+            }
+            break;
+          default:
+            // All other fields (like text) can be sent as is
+            fields[external_id] = value;
+            break;
+        }
+      }
+    }
+
+    // 3. Create the final request body for Podio
+    const podioRequestBody = {
+      fields: fields,
+    };
+
+    const response = await fetch(`https://api.podio.com/item/app/${appId}/`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `OAuth2 ${token.podioAccessToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(podioRequestBody)
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("Podio Create Item Error:", errorData);
+      throw new Error(`Podio API Error: ${errorData.error_description}`);
+    }
+
+    const newPodioItem = await response.json();
+    return NextResponse.json(newPodioItem, { status: 201 });
+
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ message: "Internal Server Error", details: errorMessage }, { status: 500 });
+  }
+}
+```
+
+## File: ./src/app/api/casos/[caseId]/route.js
+```javascript
+// src/app/api/casos/[caseId]/route.js
+
+import { NextResponse } from 'next/server';
+import { getToken } from 'next-auth/jwt';
+
+async function getPodioAccessToken(req) {
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+  if (!token || !token.podioAccessToken) {
+    throw new Error('Podio access token not found.');
+  }
+  return token.podioAccessToken;
+}
+
+async function getAppTemplate(accessToken, appId) {
+  const response = await fetch(`https://api.podio.com/app/${appId}`, {
+    headers: { Authorization: `OAuth2 ${accessToken}` },
+  });
+  if (!response.ok) throw new Error('Failed to fetch app template');
+  return await response.json();
+}
+
+export async function GET(req, { params }) {
+  try {
+    const accessToken = await getPodioAccessToken(req);
+    const { caseId } = params;
+
+    const response = await fetch(`https://api.podio.com/item/${caseId}`, {
+      method: 'GET',
+      headers: {
+        'Authorization': `OAuth2 ${accessToken}`,
+      },
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`Podio API Error: ${errorData.error_description}`);
+    }
+
+    const itemData = await response.json();
+    return NextResponse.json(itemData);
+
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ message: "Internal Server Error", details: errorMessage }, { status: 500 });
+  }
+}
+
+export async function PUT(req, { params }) {
+  try {
+    const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+    if (!token || !token.podioAccessToken) {
+      return NextResponse.json({ message: 'Not authenticated' }, { status: 401 });
+    }
+
+    const { caseId } = params;
+    const formData = await req.json();
+    const appId = process.env.PODIO_CASOS_APP_ID;
+    
+    const appTemplate = await getAppTemplate(token.podioAccessToken, appId);
+
+    const fields = {};
+    for (const external_id in formData) {
+      const value = formData[external_id];
+      const field = appTemplate.fields.find(f => f.external_id === external_id);
+
+      if (field && value !== null && value !== undefined) {
+        switch (field.type) {
+          case 'date':
+            fields[external_id] = value ? { start: value } : null;
+            break;
+          case 'money':
+            fields[external_id] = value ? parseFloat(value) : null;
+            break;
+          case 'category':
+            fields[external_id] = value ? parseInt(value, 10) : null;
+            break;
+          case 'app':
+            if (Array.isArray(value)) {
+              fields[external_id] = value.map(item => item.value);
+            } else if (value && typeof value === 'object' && value.hasOwnProperty('value')) {
+              fields[external_id] = value.value;
+            } else {
+               fields[external_id] = value;
+            }
+            break;
+          default:
+            fields[external_id] = value;
+            break;
+        }
+      }
+    }
+
+    const podioRequestBody = { fields: fields };
+
+    const response = await fetch(`https://api.podio.com/item/${caseId}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `OAuth2 ${token.podioAccessToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(podioRequestBody)
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("Podio Update Error:", errorData)
+      throw new Error(`Podio API Error: ${errorData.error_description}`);
+    }
+
+    const updatedData = await response.json();
+    return NextResponse.json(updatedData);
+
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ message: "Internal Server Error", details: errorMessage }, { status: 500 });
+  }
+}
+
+export async function DELETE(req, { params }) {
+  try {
+    const accessToken = await getPodioAccessToken(req);
+    const { caseId } = params;
+
+    const response = await fetch(`https://api.podio.com/item/${caseId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `OAuth2 ${accessToken}`,
+      },
+    });
+
+    if (response.status === 204) {
+      return NextResponse.json(null, { status: 204 });
+    }
+
+    const errorData = await response.json();
+    throw new Error(`Podio API Error: ${errorData.error_description}`);
+    
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ message: "Internal Server Error", details: errorMessage }, { status: 500 });
+  }
+}
+```
+
+## File: ./src/app/api/casos/filter/route.js
+```javascript
+// src/app/api/casos/filter/route.js
+
+import { NextResponse } from 'next/server';
+import { getToken } from 'next-auth/jwt';
+
+async function getPodioAccessToken(req) {
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+  if (!token || !token.podioAccessToken) {
+    throw new Error('Podio access token not found.');
+  }
+  return token.podioAccessToken;
+}
+
+export async function POST(req) {
+  try {
+    const accessToken = await getPodioAccessToken(req);
+    // Expect a body with filters, limit, and offset
+    const { filters, limit = 100, offset = 0 } = await req.json();
+
+    const appId = process.env.PODIO_CASOS_APP_ID;
+    const API_URL = `https://api.podio.com/item/app/${appId}/filter/`;
+
+    const requestBody = {
+      filters: filters,
+      limit: limit,
+      offset: offset,
+      sort_by: "created_on",
+      sort_desc: true,
+    };
+
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `OAuth2 ${accessToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`Podio API request failed: ${errorData.error_description}`);
+    }
+    
+    const data = await response.json();
+    
+    return NextResponse.json({
+        items: data.items || [],
+        total: data.filtered || 0,
+    });
+
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ message: 'Internal Server Error', error: errorMessage }, { status: 500 });
+  }
+}
+```
+
+## File: ./src/app/api/stats/route.js
+```javascript
+import { NextResponse } from 'next/server';
+
+export async function GET(request) {
+  // Step 1: Get all our secrets from the .env.local file
+  const clientId = process.env.PODIO_CLIENT_ID;
+  const clientSecret = process.env.PODIO_CLIENT_SECRET;
+  const username = process.env.PODIO_USERNAME;
+  const password = process.env.PODIO_PASSWORD;
+  const appId = process.env.PODIO_CASOS_APP_ID;
+
+  if (!clientId || !clientSecret || !username || !password || !appId) {
+    return NextResponse.json({ error: 'Podio API credentials are not fully configured.' }, { status: 500 });
+  }
+
+  try {
+    // Step 2: Authenticate with Podio to get an access token
+    const authResponse = await fetch('https://api.podio.com/oauth/token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+        grant_type: 'password',
+        client_id: clientId,
+        client_secret: clientSecret,
+        username: username,
+        password: password,
+      }),
+    });
+
+    if (!authResponse.ok) {
+      throw new Error('Podio authentication failed. Please check your credentials.');
+    }
+
+    const authData = await authResponse.json();
+    const accessToken = authData.access_token;
+
+    // Step 3: Use the access token to make the data request
+    const dataResponse = await fetch(`https://api.podio.com/item/app/${appId}/filter/`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `OAuth2 ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        limit: 1,
+      }),
+    });
+
+    if (!dataResponse.ok) {
+      throw new Error('Podio data fetch failed.');
+    }
+
+    const data = await dataResponse.json();
+    const totalCases = data.total;
+
+    return NextResponse.json({
+      status: 'success',
+      totalCases: totalCases,
+    });
+
+  } catch (error) {
+    console.error('Podio API Process Error:', error);
+    return NextResponse.json({ error: 'Failed to process Podio request.', details: error.message }, { status: 500 });
+  }
+}
+```
+
+## File: ./src/context/SidebarContext.js
+```javascript
+// src/context/SidebarContext.js
+'use client';
+
+import { createContext, useState, useContext } from 'react';
+
+const SidebarContext = createContext();
+
+export const SidebarProvider = ({ children }) => {
+  const [sidebarView, setSidebarView] = useState('main');
+  const [activeCasosFilter, setActiveCasosFilter] = useState(null);
+  const [activeCasosSubFilter, setActiveCasosSubFilter] = useState(null);
+
+  const value = {
+    sidebarView,
+    setSidebarView,
+    activeCasosFilter,
+    setActiveCasosFilter,
+    activeCasosSubFilter,
+    setActiveCasosSubFilter,
+  };
+
+  return (
+    <SidebarContext.Provider value={value}>
+      {children}
+    </SidebarContext.Provider>
+  );
+};
+
+export const useSidebar = () => {
+  return useContext(SidebarContext);
+};
+```
+
+## File: ./src/components/Providers.js
+```javascript
+// src/components/Providers.js
+'use client';
+
+import { SessionProvider } from 'next-auth/react';
+
+export default function Providers({ children }) {
+  return <SessionProvider>{children}</SessionProvider>;
+}
+```
+
+## File: ./src/components/FormField.js
+```javascript
+// src/components/FormField.js
+'use client';
+
+import Link from 'next/link';
+import AsyncSelect from 'react-select/async';
+
+const FormField = ({ field, value, onChange }) => {
+  // --- THE FIX IS HERE ---
+  // Added the generic "border" class to apply the border to all four sides.
+  const inputClassName = "block w-full rounded-md border border-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:ring-2 sm:text-sm p-2";
+
+  const loadOptions = async (inputValue) => {
+    try {
+      const response = await fetch('/api/podio/search-items', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          appId: field.config.settings.referenced_apps[0].app_id,
+          searchText: inputValue,
+        }),
+      });
+      if (!response.ok) return [];
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Failed to load options", error);
+      return [];
+    }
+  };
+
+  const handleSelectChange = (selectedOption) => {
+    if (field.config.settings.multiple) {
+      const existingValues = Array.isArray(value) ? value : [];
+      if (!existingValues.some(item => item.value === selectedOption.value)) {
+        onChange({ target: { name: field.external_id, value: [...existingValues, selectedOption] } });
+      }
+    } else {
+      onChange({ target: { name: field.external_id, value: selectedOption } });
+    }
+  };
+
+  const handleRemove = (itemToRemove) => {
+    const newValue = value.filter(item => item.value !== itemToRemove.value);
+    onChange({ target: { name: field.external_id, value: newValue } });
+  };
+
+  const renderField = () => {
+    switch (field.type) {
+      case 'category':
+        return (
+          <select id={field.external_id} name={field.external_id} value={value} onChange={onChange} className={inputClassName}>
+            <option value="">Select an option...</option>
+            {field.config.settings.options.map((option) => (
+              <option key={option.id} value={option.id}>
+                {option.text}
+              </option>
+            ))}
+          </select>
+        );
+      case 'date':
+        return <input type="date" id={field.external_id} name={field.external_id} value={value} onChange={onChange} className={inputClassName} />;
+      case 'money':
+        return <input type="number" id={field.external_id} name={field.external_id} value={value} onChange={onChange} step="0.01" className={inputClassName} />;
+      case 'app':
+        const isMulti = field.config.settings.multiple;
+        const selectedItems = Array.isArray(value) ? value : (value ? [value] : []);
+        const referencedAppSlug = field.config.settings.referenced_apps[0].url_label;
+        return (
+          <div>
+            <AsyncSelect
+              key={field.external_id}
+              value={null}
+              onChange={handleSelectChange}
+              loadOptions={loadOptions}
+              placeholder="Search to add an item..."
+              classNamePrefix="react-select"
+            />
+            {selectedItems.length > 0 && (
+              <div className="mt-4 flow-root">
+                <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                  <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                    <table className="min-w-full divide-y divide-gray-300">
+                      <thead>
+                        <tr>
+                          <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Selected Item</th>
+                          <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-0"><span className="sr-only">Remove</span></th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-200">
+                        {selectedItems.map(item => (
+                          <tr key={item.value}>
+                            <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+                              <Link href={`/dashboard/${referencedAppSlug}/${item.value}`}>
+                                <span className="text-indigo-600 hover:text-indigo-900 hover:underline">{item.label}</span>
+                              </Link>
+                            </td>
+                            <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                              <button type="button" onClick={() => handleRemove(item)} className="text-indigo-600 hover:text-indigo-900">
+                                Remove
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      default:
+        return <input type="text" id={field.external_id} name={field.external_id} value={value} onChange={onChange} className={inputClassName} />;
+    }
+  };
+
+  return (
+    <div>
+      <label htmlFor={field.external_id} className="block text-sm font-medium text-gray-700">{field.label}</label>
+      <div className="mt-1">{renderField()}</div>
+      {field.config.description && <p className="mt-2 text-sm text-gray-500">{field.config.description}</p>}
+    </div>
+  );
+};
+
+export default FormField;
+```
+
+## File: ./src/components/HtmlRenderer.js
+```javascript
+'use client'; // This component uses a browser-only property
+
+export default function HtmlRenderer({ htmlString }) {
+  if (!htmlString) return null;
+  return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;
+}
+```
+
+## File: ./src/components/SignOutButton.js
+```javascript
+'use client'
+
+import { signOut } from 'next-auth/react'
+
+export default function SignOutButton() {
+  return (
+    <button 
+      onClick={() => signOut({ callbackUrl: '/' })}
+      className="w-full rounded-md bg-gray-700 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
+    >
+      Sign Out
+    </button>
+  )
+}
+```
+
+## File: ./src/components/CasosFilterPanel.js
+```javascript
+// src/components/CasosFilterPanel.js
+'use client';
+
+import { useSidebar } from '../context/SidebarContext';
+
+export default function CasosFilterPanel() {
+  const { 
+    setSidebarView, 
+    casosFilters, 
+    activeCasosFilter, 
+    setActiveCasosFilter 
+  } = useSidebar();
+
+  return (
+    <div>
+      <button 
+        onClick={() => setSidebarView('main')}
+        className="text-sm font-semibold text-gray-300 hover:text-white flex items-center mb-4"
+      >
+        <svg xmlns="http://www.w.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2">
+          <path fillRule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clipRule="evenodd" />
+        </svg>
+        Volver al Menú Principal
+      </button>
+
+      <div className="flex-grow">
+        <ul className="space-y-2">
+          <li className="font-bold text-white text-md">Filtros Pre-definidos</li>
+          {casosFilters.map(filter => (
+            <li key={filter.id}>
+              <button 
+                onClick={() => setActiveCasosFilter(filter)}
+                className={`w-full text-left p-2 rounded-md text-gray-400 hover:bg-slate-700 hover:text-white ${activeCasosFilter?.id === filter.id ? 'bg-slate-700 text-white' : ''}`}
+              >
+                {filter.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+```
+
+## File: ./src/components/CasosProyectosPanel.js
+```javascript
+// src/components/CasosProyectosPanel.js
+'use client';
+
+import Link from 'next/link';
+import { useSidebar } from '@/context/SidebarContext';
+import { proyectosConfig } from '@/app/dashboard/casos/[proyectoSlug]/proyectos-config';
+
+export default function CasosProyectosPanel() {
+  const { setSidebarView } = useSidebar();
+
+  // Convert the config object to an array for mapping
+  const proyectosList = Object.keys(proyectosConfig).map(slug => ({
+    id: slug,
+    name: proyectosConfig[slug].name,
+  }));
+
+  return (
+    <div>
+      <button 
+        onClick={() => setSidebarView('main')}
+        className="text-sm font-semibold text-gray-300 hover:text-white flex items-center mb-4"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2"><path fillRule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clipRule="evenodd" /></svg>
+        Volver al Menú Principal
+      </button>
+
+      <div className="flex-grow">
+        <ul className="space-y-2">
+          <li className="font-bold text-white text-md">Proyectos</li>
+          {proyectosList.map(proyecto => (
+            <li key={proyecto.id}>
+              <Link href={`/dashboard/casos/${proyecto.id}`} className="block p-2 rounded-md text-gray-400 hover:bg-slate-700 hover:text-white">
+                {proyecto.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+```
+
+## File: ./src/components/CasosTable.js
+```javascript
+// src/components/CasosTable.js
+
+import Link from 'next/link';
+import HtmlRenderer from './HtmlRenderer';
+
+// Helper function to format dates
+const formatDate = (dateString) => {
+  if (!dateString) return 'N/A';
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(date);
+};
+
+export default function CasosTable({ casos, handleDelete }) {
+  // Find a specific field in the Podio item's field array
+  const findField = (item, externalId) => {
+    return item.fields.find(f => f.external_id === externalId);
+  };
+  
+  return (
+    <table className="min-w-full divide-y divide-gray-300">
+      <thead>
+        <tr>
+          {/* THE CHANGE IS ON THE NEXT LINE */}
+          <th scope="col" className="sticky top-0 z-10 bg-gray-50 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 lg:pl-8">
+            Edit
+          </th>
+          <th scope="col" className="sticky top-0 z-10 bg-gray-50 px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+            Case Title
+          </th>
+          <th scope="col" className="sticky top-0 z-10 bg-gray-50 px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+            Created By
+          </th>
+          <th scope="col" className="sticky top-0 z-10 bg-gray-50 px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+            Created On
+          </th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-gray-200 bg-white">
+        {casos.length > 0 ? (
+          casos.map((caso) => {
+            const createdByField = findField(caso, 'created-by-2');
+            const createdByName = createdByField?.values[0]?.value?.name || 'N/A';
+
+            return (
+              <tr key={caso.item_id}>
+                <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">
+                  <Link href={`/dashboard/casos/${caso.item_id}`}>
+                    <span className="text-indigo-600 hover:text-indigo-900">Edit</span>
+                  </Link>
+                </td>
+                <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{caso.title}</td>
+                <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{createdByName}</td>
+                <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{formatDate(caso.created_on)}</td>
+              </tr>
+            );
+          })
+        ) : (
+          <tr>
+            <td colSpan="4" className="text-center py-4 text-sm text-gray-500">
+              No cases found.
+            </td>
+          </tr>
+        )}
+      </tbody>
+    </table>
+  );
+}
+```
+
+## File: ./src/components/CasoForm.js
+```javascript
+// src/components/CasoForm.js
+'use client';
+
+import Link from 'next/link';
+import FormField from './FormField';
+import { formLayout } from '../app/dashboard/casos/[proyectoSlug]/form-layout';
+
+// This map connects a number to the full Tailwind class name.
+const columnClassMap = {
+  1: 'md:grid-cols-1',
+  2: 'md:grid-cols-2',
+  3: 'md:grid-cols-3',
+  4: 'md:grid-cols-4',
+};
+
+const CasoForm = ({ appTemplate, formData, handleInputChange, handleSubmit, isSubmitting, pageTitle, caseId }) => {
+  // Get a set of all field IDs that are defined in the layout for quick lookups
+  const layoutFieldIds = new Set(
+    formLayout.sections.flatMap(section => section.rows.flatMap(row => row.fields.map(f => f.id)))
+  );
+
+  // Filter the app's fields to include only those not in the layout and not hidden
+  const unmappedFields = appTemplate.fields.filter(field =>
+    !layoutFieldIds.has(field.external_id) &&
+    !formLayout.hiddenFields.includes(field.external_id) &&
+    field.status === 'active' &&
+    !field.config.hidden
+  );
+
+  return (
+    <div className="p-4 sm:p-6 lg:p-8">
+      <h1 className="text-2xl font-bold mb-6">{pageTitle}: {formData.title || caseId || ''}</h1>
+      <form onSubmit={handleSubmit} className="space-y-8 bg-white p-8 rounded-lg shadow-md">
+        {/* Render the sections defined in the layout */}
+        {formLayout.sections.map((section, sectionIndex) => (
+          <div key={sectionIndex}>
+            <h2 className="text-lg font-semibold text-white bg-slate-800 text-center rounded-md py-2 px-4 mb-6">{section.title}</h2>
+            <div className="space-y-6">
+              {section.rows.map((row, rowIndex) => (
+                <div key={rowIndex} className={`grid grid-cols-1 ${columnClassMap[row.columns] || 'md:grid-cols-1'} gap-6`}>
+                  {row.fields.map(fieldConfig => {
+                    // Conditional logic to show/hide fields
+                    if (fieldConfig.showWhen) {
+                      const triggerValue = formData[fieldConfig.showWhen.fieldId];
+                      if (String(triggerValue) !== String(fieldConfig.showWhen.hasValue)) {
+                        return null; // Don't render the field if the condition isn't met
+                      }
+                    }
+
+                    const field = appTemplate.fields.find(f => f.external_id === fieldConfig.id);
+                    if (!field) return null;
+                    
+                    return (
+                      <FormField
+                        key={field.external_id}
+                        field={field}
+                        value={formData[field.external_id] || ''}
+                        onChange={handleInputChange}
+                      />
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {/* Render any unmapped fields in a default "Other Fields" section */}
+        {unmappedFields.length > 0 && (
+          <div>
+            <h2 className="text-lg font-semibold text-white bg-slate-800 text-center rounded-md py-2 px-4 mb-6">Other Fields</h2>
+            <div className="space-y-6">
+              {unmappedFields.map(field => (
+                <div key={field.external_id} className="grid grid-cols-1 gap-6">
+                    <FormField
+                      field={field}
+                      value={formData[field.external_id] || ''}
+                      onChange={handleInputChange}
+                    />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="flex justify-end pt-4 border-t mt-6">
+          <Link href="/dashboard/casos">
+            <button type="button" className="rounded-md bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 ring-1 ring-inset ring-gray-300">
+              Cancel
+            </button>
+          </Link>
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="ml-3 inline-flex justify-center rounded-md bg-indigo-600 py-2 px-4 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 disabled:opacity-50"
+          >
+            {isSubmitting ? 'Saving...' : 'Save Changes'}
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default CasoForm;
+```
+
+## File: ./src/components/SidebarNav.js
+```javascript
+// src/components/SidebarNav.js
+'use client';
+
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+
+// The component now accepts a 'links' prop
+export default function SidebarNav({ links }) {
+  const pathname = usePathname();
+
+  return (
+    <ul role="list" className="flex flex-1 flex-col gap-y-7">
+      <li>
+        <ul role="list" className="-mx-2 space-y-1">
+          {links.map((link) => {
+            const isActive = pathname.startsWith(link.href);
+            return (
+              <li key={link.name}>
+                <Link href={link.href}>
+                  <span
+                    className={`
+                      ${isActive ? 'bg-slate-700 text-white' : 'text-gray-400 hover:text-white hover:bg-slate-700'}
+                      group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold
+                    `}
+                  >
+                    {link.name}
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </li>
+    </ul>
+  );
+}
+```
+
+## File: ./src/components/CasosDetailFilterPanel.js
+```javascript
+// src/components/CasosDetailFilterPanel.js
+'use client';
+
+import { useState, useEffect, useMemo } from 'react';
+import { useSidebar } from '@/context/SidebarContext';
+
+export default function CasosDetailFilterPanel() {
+  const { 
+    setSidebarView, 
+    activeCasosFilter, 
+    activeCasosSubFilter, 
+    setActiveCasosSubFilter 
+  } = useSidebar();
+  
+  const [userFilters, setUserFilters] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchFilters = async () => {
+      setIsLoading(true);
+      try {
+        const response = await fetch('/api/podio/user-filters');
+        if (!response.ok) throw new Error('Failed to fetch user filters');
+        const data = await response.json();
+        setUserFilters(data);
+
+        // After fetching, find the default "all" filter for the current project and set it as active.
+        const currentProjectName = activeCasosFilter?.name || '';
+        // Find a default filter (either one named "Todos los Casos" or the very first one in the list)
+        const defaultFilter = data.find(f => f.proyecto === currentProjectName && f.name.includes('Todos')) || data.find(f => f.proyecto === currentProjectName);
+        if (defaultFilter) {
+          setActiveCasosSubFilter(defaultFilter);
+        }
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    if(activeCasosFilter){
+        fetchFilters();
+    }
+  }, [activeCasosFilter, setActiveCasosSubFilter]);
+
+  const { premade, custom } = useMemo(() => {
+    const currentProjectName = activeCasosFilter?.name || '';
+    const premade = userFilters.filter(f => f.proyecto === currentProjectName && f.type === 'Pre-definido');
+    const custom = userFilters.filter(f => f.proyecto === currentProjectName && f.type === 'Personalizado');
+    return { premade, custom };
+  }, [userFilters, activeCasosFilter]);
+
+  if (isLoading) {
+    return <p className="text-gray-400 text-sm">Loading filters...</p>;
+  }
+
+  return (
+    <div>
+      <div className="space-y-1">
+        <button onClick={() => setSidebarView('main')} className="text-xs font-medium text-gray-400 hover:text-white flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 mr-1"><path fillRule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clipRule="evenodd" /></svg>
+            Menú Principal
+        </button>
+        <button onClick={() => setSidebarView('casosDashboard')} className="text-sm font-semibold text-gray-300 hover:text-white flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2"><path fillRule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clipRule="evenodd" /></svg>
+            Casos
+        </button>
+      </div>
+
+      <div className="mt-4 flex-grow">
+        <div className="font-bold text-white text-md pt-4 mb-2">{activeCasosFilter?.name}</div>
+        
+        <div className="font-semibold text-gray-300 text-sm mb-2">Filtros Pre-definidos</div>
+        <ul className="space-y-1">
+          {premade.map(filter => (
+            <li key={filter.id}>
+              <button 
+                onClick={() => setActiveCasosSubFilter(filter)}
+                className={`w-full text-left p-2 rounded-md text-gray-400 hover:bg-slate-700 hover:text-white ${activeCasosSubFilter?.id === filter.id ? 'bg-slate-700 text-white' : ''}`}
+              >
+                {filter.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        <div className="font-semibold text-gray-300 text-sm mt-4 mb-2">Mis Filtros</div>
+        <ul className="space-y-1">
+          {custom.map(filter => (
+            <li key={filter.id}>
+              <button 
+                onClick={() => setActiveCasosSubFilter(filter)}
+                className={`w-full text-left p-2 rounded-md text-gray-400 hover:bg-slate-700 hover:text-white ${activeCasosSubFilter?.id === filter.id ? 'bg-slate-700 text-white' : ''}`}
+              >
+                {filter.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+```
+

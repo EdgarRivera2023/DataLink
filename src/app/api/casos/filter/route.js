@@ -1,12 +1,10 @@
-// src/app/api/casos/filter/route.js
-
 import { NextResponse } from 'next/server';
 import { getToken } from 'next-auth/jwt';
 
 async function getPodioAccessToken(req) {
   const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
   if (!token || !token.podioAccessToken) {
-    throw new Error('Podio access token not found.');
+    throw new Error('No Podio Access Token found. Are you logged in?');
   }
   return token.podioAccessToken;
 }
@@ -14,19 +12,16 @@ async function getPodioAccessToken(req) {
 export async function POST(req) {
   try {
     const accessToken = await getPodioAccessToken(req);
-    // Expect a body with filters, limit, and offset
-    const { filters, limit = 100, offset = 0 } = await req.json();
+    const body = await req.json();
+    
+    // Fallback logic for the App ID
+    const appId = body.appId || process.env.PODIO_CASOS_APP_ID; 
+    
+    if (!appId) throw new Error("No App ID provided to filter route.");
 
-    const appId = process.env.PODIO_CASOS_APP_ID;
+    console.log(`🚀 Mirroring App ID: ${appId}...`);
+
     const API_URL = `https://api.podio.com/item/app/${appId}/filter/`;
-
-    const requestBody = {
-      filters: filters,
-      limit: limit,
-      offset: offset,
-      sort_by: "created_on",
-      sort_desc: true,
-    };
 
     const response = await fetch(API_URL, {
       method: 'POST',
@@ -34,23 +29,34 @@ export async function POST(req) {
         'Authorization': `OAuth2 ${accessToken}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(requestBody)
+      body: JSON.stringify({
+        filters: body.filters || {},
+        limit: body.limit || 50,
+        offset: body.offset || 0,
+      })
     });
 
     if (!response.ok) {
       const errorData = await response.json();
-      throw new Error(`Podio API request failed: ${errorData.error_description}`);
+      console.error("❌ Podio API rejected the request:", errorData);
+      return NextResponse.json({ 
+        error: "Podio Error", 
+        details: errorData.error_description 
+      }, { status: response.status });
     }
-    
+
     const data = await response.json();
     
-    return NextResponse.json({
-        items: data.items || [],
-        total: data.filtered || 0,
+    // Log success in the terminal
+    console.log(`✅ Success: Found ${data.filtered} items for App ${appId}`);
+
+    return NextResponse.json({ 
+      items: data.items || [], 
+      total: data.filtered || 0 
     });
 
   } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
-    return NextResponse.json({ message: 'Internal Server Error', error: errorMessage }, { status: 500 });
+    console.error("⛔ CRITICAL API ERROR:", error.message);
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
