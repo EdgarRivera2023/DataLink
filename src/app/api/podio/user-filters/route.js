@@ -1,4 +1,5 @@
 // src/app/api/podio/user-filters/route.js
+export const dynamic = 'force-dynamic';
 
 import { NextResponse } from 'next/server';
 import { getToken } from 'next-auth/jwt';
