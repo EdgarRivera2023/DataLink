@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
-import CasoForm from '../../../../components/CasoForm';
+import CasoForm from '@/components/CasoForm';
 
 export default function NewCasoPage() {
   const [appTemplate, setAppTemplate] = useState(null);
